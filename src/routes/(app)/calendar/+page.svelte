@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { DayFlowCalendar, useCalendarApp } from '@dayflow/svelte';
+	import { createAgendaView, DayFlowCalendar, useCalendarApp, ViewType } from '@dayflow/svelte';
+	import { createSidebarPlugin } from '@dayflow/plugin-sidebar';
 	import {
 		createDayView, createWeekView,
 		createMonthView, createEventsPlugin,
@@ -66,10 +67,14 @@
 	}
 
   const calendar = useCalendarApp({
-    views: [createDayView(), createWeekView(), createMonthView()],
+    views: [createDayView()],
+	defaultView: ViewType.DAY,
     plugins: [
 		// createDragPlugin(),
-		createEventsPlugin()
+		createEventsPlugin(),
+		// createSidebarPlugin({
+		// 	width: 500,
+		// }),
 	],
     calendars: [
       {

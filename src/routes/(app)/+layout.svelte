@@ -9,11 +9,13 @@
 </script>
 
 <div class="app-container">
-	{#if !isHome}
-		<BackButton></BackButton>	
-	{/if}
+	<div class="grow-0">
+		{#if !isHome}
+			<BackButton></BackButton>	
+		{/if}
+	</div>
 
-	<main>
+	<main class="grow">
 		{@render children()}
 	</main>
 </div>

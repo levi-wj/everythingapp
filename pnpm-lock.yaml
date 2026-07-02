@@ -11,6 +11,9 @@ importers:
       '@dayflow/core':
         specifier: ^3.6.5
         version: 3.6.5
+      '@dayflow/plugin-sidebar':
+        specifier: ^1.5.5
+        version: 1.5.5(@dayflow/core@3.6.5)
       '@dayflow/svelte':
         specifier: ^3.6.5
         version: 3.6.5(@dayflow/core@3.6.5)(svelte@5.56.4)
@@ -62,6 +65,11 @@ packages:
 
   '@dayflow/core@3.6.5':
     resolution: {integrity: sha512-+bk1vUoDEF6Cbq65WB0m7x0oJoo7/l9m8IL2mQntNdqGOi9zt0ttPsYpLNc36uQqC/r934+64jRYDP+WIkYIwg==}
+
+  '@dayflow/plugin-sidebar@1.5.5':
+    resolution: {integrity: sha512-7Yky+jt8J4bE4riU6vUu7Fwt7rIUIUqQsgE0jsUq9dw3oNPvl5HYvkFdFp9zlonFcL/gk56eaBjcmy14K725sA==}
+    peerDependencies:
+      '@dayflow/core': 3.6.5
 
   '@dayflow/svelte@3.6.5':
     resolution: {integrity: sha512-WeUTc85g6gkkF0aHU26jIBfsq3eMMl2+5eMXctJzu1nEzyp8sCz1Cu7b8uteVUDyknc/i13dfjVxPItMcObyug==}
@@ -728,6 +736,10 @@ snapshots:
       preact: 10.29.3
       temporal-polyfill: 0.3.2
       tslib: 2.8.1
+
+  '@dayflow/plugin-sidebar@1.5.5(@dayflow/core@3.6.5)':
+    dependencies:
+      '@dayflow/core': 3.6.5
 
   '@dayflow/svelte@3.6.5(@dayflow/core@3.6.5)(svelte@5.56.4)':
     dependencies:

@@ -1,2 +1,21 @@
 @import '@dayflow/core/dist/styles.components.css';
 @import 'tailwindcss';
+
+.app-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main, .df-calendar-wrapper, .df-calendar-container {
+    height: 100%;
+}
+
+.df-day-content {
+    display: none;
+}
+
+.df-right-panel {
+    width: 100%;
+    display: block !important;
+}
