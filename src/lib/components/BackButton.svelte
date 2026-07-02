@@ -1,1 +1,1 @@
-<a href="/home">Back</a>
+<a href="/home" class="bg-amber-200 p-10">Back</a>

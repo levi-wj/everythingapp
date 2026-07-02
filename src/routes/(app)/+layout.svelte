@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../layout.css';
+	import '../../index.css';
     import BackButton from '$lib/components/BackButton.svelte';
 	import { page } from '$app/state';
 

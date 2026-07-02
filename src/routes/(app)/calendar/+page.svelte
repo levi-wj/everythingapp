@@ -6,10 +6,10 @@
 		createEvent, createAllDayEvent,
 	} from '@dayflow/core';
 	//   import { createDragPlugin } from '@dayflow/plugin-drag';
-	import '@dayflow/core/dist/styles.css';
 	import type { PageData } from './$types';
 	import { differenceInMilliseconds, addMilliseconds } from 'date-fns';
 	import * as rrulePkg from 'rrule'; // Silly syntax for CommonJS packages, explicitly unpack
+    import type { Tables } from '$lib/database.types';
 	const rrulestr = rrulePkg.rrulestr ?? rrulePkg.default?.rrulestr;
 
 	let { data }: { data: PageData } = $props();
@@ -19,10 +19,9 @@
 	let viewEndDate = $state(new Date('2026-07-31T23:59:59Z'));
 	const calendarId = 'family';
 
-	const generateDayviewEvent = (eventData: Tables<'event'>, start, end) => {
+	const generateDayviewEvent = (eventData: Tables<'event'>, start: Date, end: Date) => {
 		const dayViewEventData = {
 			id: `${eventData.id}-${start.getTime()}`,
-			start: eventData.start_time,
 			title: eventData.title,
 			start,
 			end,
@@ -35,10 +34,10 @@
 		}
 	}
 
-	const expandEvents = events => {
+	const expandEvents = (events: Tables<'event'>[]) => {
 		let expandedEvents = [];
 
-		for (const event of data.events) {
+		for (const event of events) {
 			if (event.rrule) {
 				// Calculate the duration of the original event
 				const originalStart = new Date(event.start_time);
