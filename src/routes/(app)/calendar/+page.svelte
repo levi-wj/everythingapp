@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { createAgendaView, DayFlowCalendar, useCalendarApp, ViewType } from '@dayflow/svelte';
-	import { createSidebarPlugin } from '@dayflow/plugin-sidebar';
 	import {
 		createDayView, createWeekView,
 		createMonthView, createEventsPlugin,
@@ -19,6 +18,7 @@
 	let viewStartDate = $state(new Date('2026-07-01T00:00:00Z'));
 	let viewEndDate = $state(new Date('2026-07-31T23:59:59Z'));
 	const calendarId = 'family';
+	const initialDate = new Date();
 
 	const generateDayviewEvent = (eventData: Tables<'event'>, start: Date, end: Date) => {
 		const dayViewEventData = {
@@ -66,31 +66,44 @@
 		return expandedEvents;
 	}
 
-  const calendar = useCalendarApp({
-    views: [createDayView()],
-	defaultView: ViewType.DAY,
-    plugins: [
-		// createDragPlugin(),
-		createEventsPlugin(),
-		// createSidebarPlugin({
-		// 	width: 500,
-		// }),
-	],
-    calendars: [
-      {
-        id: calendarId,
-        name: 'Family',
-        colors: {
-          lineColor: '#2563eb',
-          eventColor: '#dbeafe',
-          eventSelectedColor: '#bfdbfe',
-          textColor: '#1e3a8a',
-        },
-      },
-    ],
-    events: expandEvents(data.events),
-    initialDate: new Date(),
-  });
+	const setCurrentDayStyles = (date: Date) => {
+		const today = new Date(initialDate);
+		today.setHours(0,0,0,0);
+		const todayBtn: HTMLButtonElement | null = document.querySelector('button.df-mini-calendar-day[data-today="true"]');
+		if (todayBtn) {
+			if (date.valueOf() == today.valueOf()) {
+				todayBtn.dataset.selected = 'true';
+			} else {
+				delete todayBtn.dataset.selected;
+			}
+		}
+	}
+
+	const calendar = useCalendarApp({
+		views: [createDayView()],
+		defaultView: ViewType.DAY,
+		plugins: [
+			// createDragPlugin(),
+			createEventsPlugin(),
+		],
+		callbacks: {
+			onDateChange: setCurrentDayStyles,
+		},
+		calendars: [
+			{
+				id: calendarId,
+				name: 'Family',
+				colors: {
+					lineColor: '#2563eb',
+					eventColor: '#dbeafe',
+					eventSelectedColor: '#bfdbfe',
+					textColor: '#1e3a8a',
+				},
+			},
+		],
+		events: expandEvents(data.events),
+		initialDate,
+	});
 </script>
 
 <DayFlowCalendar {calendar} />

@@ -11,11 +11,37 @@ main, .df-calendar-wrapper, .df-calendar-container {
     height: 100%;
 }
 
+/* Hide the main calendar */
 .df-day-content {
     display: none;
 }
 
+/* Make the mini calendar take up the whole screen */
 .df-right-panel {
     width: 100%;
     display: block !important;
+}
+
+/*
+    Mini calendar styles
+*/
+.df-mini-calendar-day {
+}
+.df-mini-calendar-day[data-today="true"] {
+    /* background-color: var(--color-blue-50); */
+    background-color: transparent;
+    color: var(--color-violet-400);
+    font-weight: 900;
+}
+.df-mini-calendar-day[data-today="true"][data-selected="true"] {
+    background-color: var(--color-violet-400);
+}
+
+.df-mini-calendar-day[data-selected="true"] {
+    color: white;
+    background-color: var(--color-indigo-400);
+}
+
+.df-mini-calendar-dots {
+    margin-top: .5em;
 }
