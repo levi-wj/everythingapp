@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?vnsxjt');
+  src:  url('fonts/icomoon.eot?vnsxjt#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vnsxjt') format('truetype'),
+    url('fonts/icomoon.woff?vnsxjt') format('woff'),
+    url('fonts/icomoon.svg?vnsxjt#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* personal */
+.icon-pill-solid:before {
+  content: "\e932";
+}
+.icon-pill:before {
+  content: "\e933";
+}
+.icon-grocery:before {
+  content: "\e934";
+}
+.icon-cycle:before {
+  content: "\e93b";
+}
+.icon-list:before {
+  content: "\e93c";
+}
+
+/* Date and time */
+.icon-calendar:before {
+  content: "\e935";
+}
+.icon-calendar-page:before {
+  content: "\e936";
+}
+.icon-clock-ticks:before {
+  content: "\e939";
+}
+.icon-clock-alarm:before {
+  content: "\e93a";
+}
+.icon-clock:before {
+  content: "\e93d";
+}
+
+/* folders, files, and file management */
+.icon-folder:before {
+  content: "\e914";
+}
+.icon-file:before {
+  content: "\e912";
+}
+.icon-image-file:before {
+  content: "\e913";
+}
+.icon-image:before {
+  content: "\e919";
+}
+.icon-video-file:before {
+  content: "\e93e";
+}
+.icon-code:before {
+  content: "\e907";
+}
+.icon-filebox:before {
+  content: "\e938";
+}
+.icon-archive:before {
+  content: "\e902";
+}
+.icon-archive-1:before {
+  content: "\e900";
+}
+.icon-archive-2:before {
+  content: "\e901";
+}
+.icon-archive-arrow:before {
+  content: "\e937";
+}
+.icon-download:before {
+  content: "\e90a";
+}
+.icon-upload:before {
+  content: "\e92c";
+}
+.icon-trash:before {
+  content: "\e92b";
+}
+
+/* navigation */
+.icon-arrow-down:before {
+  content: "\e903";
+}
+.icon-arrow-left:before {
+  content: "\e904";
+}
+.icon-arrow-right:before {
+  content: "\e905";
+}
+.icon-arrow-up:before {
+  content: "\e906";
+}
+.icon-home:before {
+  content: "\e916";
+}
+.icon-hamburger:before {
+  content: "\e915";
+}
+.icon-x:before {
+  content: "\e931";
+}
+.icon-kebab:before {
+  content: "\e91b";
+}
+.icon-kebab-solid:before {
+  content: "\e91a";
+}
+
+/* social */
+.icon-person-solid:before {
+  content: "\e920";
+}
+.icon-person:before {
+  content: "\e921";
+}
+.icon-notification:before {
+  content: "\e91d";
+}
+.icon-comment:before {
+  content: "\e908";
+}
+
+/* functional */
+.icon-pause:before {
+  content: "\e91e";
+}
+.icon-play:before {
+  content: "\e922";
+}
+.icon-plus:before {
+  content: "\e923";
+}
+.icon-minus:before {
+  content: "\e91c";
+}
+.icon-search:before {
+  content: "\e925";
+}
+.icon-refresh:before {
+  content: "\e924";
+}
+.icon-settings:before {
+  content: "\e926";
+}
+.icon-pencil:before {
+  content: "\e91f";
+}
+.icon-eye-open:before {
+  content: "\e918";
+}
+.icon-eye-closed:before {
+  content: "\e911";
+}
+.icon-eye-closed-lashes:before {
+  content: "\e910";
+}
+
+/* custom elements */
+.icon-dot:before {
+  content: "\e909";
+}
+.icon-empty-checkbox:before {
+  content: "\e93f";
+}
+
+/* success */
+.icon-success:before {
+  content: "\e927";
+  color: var(--color-avocado-300);
+}
+.icon-success:after {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+
+/* warning */
+.icon-warning:before {
+  content: "\e92d";
+  color: var(--color-caramel-300);
+}
+.icon-warning:after {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+
+/* error */
+.icon-error:before {
+  content: "\e90f";
+  color: var(--color-red-400);
+}
+.icon-error:after {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+
+/* shapes */
+.icon-square:before {
+  content: "\e927";
+  color: var(--color-avocado-300);
+}
+.icon-triangle:before {
+  content: "\e92d";
+  color: var(--color-caramel-300);
+}
+.icon-octagon:before {
+  content: "\e90f";
+  color: var(--color-scarlet-400);
+}

@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Cushion";
+  src: url("src/lib/assets/Cushion/LTCushion-Light.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cushion";
+  src: url("src/lib/assets/Cushion/LTCushion-Medium.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cushion";
+  src: url("src/lib/assets/Cushion/LTCushion-Bold.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cushion";
+  src: url("src/lib/assets/Cushion/LTCushion-Black.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("src/lib/assets/DM_Sans/DMSans.ttf") format("truetype");
+  font-weight: 250;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("src/lib/assets/DM_Sans/DMSans-Italic.ttf") format("truetype");
+  font-weight: 250;
+  font-style: italic;
+}

@@ -1,5 +1,18 @@
+@import url('./fonts.css');
+@import url('./theme.css');
 @import '@dayflow/core/dist/styles.components.css';
 @import 'tailwindcss';
+
+h1 {
+    font-size: 2em; 
+}
+h2 {
+    font-size: 1.6em; 
+}
+
+h3, h4, h5, h6 {
+    font-size: 1.2em; 
+}
 
 .app-container {
     height: 100vh;
@@ -7,6 +20,9 @@
     flex-direction: column;
 }
 
+body {
+    background-color: var(--color-caramel-000);
+}
 main, .df-calendar-wrapper, .df-calendar-container {
     height: 100%;
 }
