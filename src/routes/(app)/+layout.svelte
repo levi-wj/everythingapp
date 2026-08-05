@@ -10,7 +10,7 @@
 	let isHome = $derived(page.url.pathname === '/home');
 </script>
 
-<div class="app-container relative bg-caramel-000">
+<div class="app-container">
 	<div class="grow-0">
 		{#if !isHome}
 			<BackButton></BackButton>	
